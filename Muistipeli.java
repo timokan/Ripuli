@@ -1,16 +1,17 @@
 package Muistipeli;
 
 import javax.swing.*;
-
-
-
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
+
 
 public class Muistipeli extends JPanel {
 
 	public Muistipeli() {
+		
+		
+		
+		//Luodaan pelin interface
 		this.setLayout(new GridBagLayout());
 
 		GridBagConstraints rajat = new GridBagConstraints();
@@ -71,28 +72,11 @@ public class Muistipeli extends JPanel {
 		this.add(poistu, rajat);
 
 	}
-	class pois implements ActionListener {
-		public void actionPerformed(ActionEvent event) {
+	
 
-			System.exit(0);
-		}
-
-	}
-
-	class kuvat implements ActionListener {
-
-		public void actionPerformed(ActionEvent event) {
-			if (event.getSource() instanceof JButton)
-				;
-
-			JButton napit = (JButton) event.getSource();
-
-			ImageIcon green = new ImageIcon(getClass().getResource("punisher.jpg"));
-			napit.setIcon(green);
-
-		}
-
-	}
+	//static String[] kuvia ={"green" , "busters"};
+	
+	
 
 		public static void main(String[] args) {
 
