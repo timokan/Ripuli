@@ -5,7 +5,11 @@ import java.awt.*;
 
 
 
-public class Muistipeli extends JPanel {
+public class Muistipeli extends JPanel  {
+	
+	
+	
+	
 
 	public Muistipeli() {
 		
@@ -28,7 +32,10 @@ public class Muistipeli extends JPanel {
 
 			paneeli.add(napit[i]);
 			napit[i].addActionListener(new kuvat());
+			
 		}
+		
+		
 		JLabel pisteet = new JLabel("PISTEET:");
 		pisteet.setFont(new Font("Serif", Font.BOLD, 20));
 		
@@ -80,13 +87,10 @@ public class Muistipeli extends JPanel {
 
 		public static void main(String[] args) {
 
-			JFrame ikkuna = new JFrame();
-			ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-			ikkuna.setContentPane(new Muistipeli());
-			ikkuna.setSize(600, 600);
-
-			ikkuna.setVisible(true);
+			new Etusivu();
 
 		}
+
+
+		
 }

@@ -5,11 +5,24 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 
+class normi implements ActionListener{
+	public void actionPerformed(ActionEvent event){
+		
+		JFrame ikkuna = new JFrame();
+		ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-public class Pelaaja extends Muistipeli {
+		ikkuna.setContentPane(new Muistipeli());
+		ikkuna.setSize(600, 600);
 
+		ikkuna.setVisible(true);
+		
+		
+	}
+	
 }
+
 
 //Poistu pelistä - napin toiminta
 class pois implements ActionListener {
@@ -54,28 +67,34 @@ class kuvat implements ActionListener {
 				int randomi = rand.nextInt(max-min +1)+min;
 				
 				if(randomi == 0 && greenNum < 2){
-			napit.setIcon(green);
-			greenNum++;
-			}
+					greenNum++;
+					napit.setIcon(green);
+					napit.setContentAreaFilled(false);
+				}
 			if(randomi == 1 && busterNum < 2){
-				napit.setIcon(busters);
 				busterNum++;
+				napit.setIcon(busters);
+				
 			}
 			if(randomi == 2 && americaNum < 2){
-				napit.setIcon(america);
 				americaNum++;
+				napit.setIcon(america);
+				
 			}
 			if(randomi==3 && flashNum < 2) {
-				napit.setIcon(flash);
 				flashNum++;
+				napit.setIcon(flash);
+				
 			}
 			if(randomi == 4 && ironmanNum < 2){
-				napit.setIcon(ironman);
 				ironmanNum++;
+				napit.setIcon(ironman);
+				
 			}
 			if(randomi == 5 && spawnNum < 2){
-				napit.setIcon(spawn);
 				spawnNum++;
+				napit.setIcon(spawn);
+				
 			}
 			
 
@@ -83,4 +102,3 @@ class kuvat implements ActionListener {
 
 }
 }
-
